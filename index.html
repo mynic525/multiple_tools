@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Tool Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Multi-Tool Dashboard</h1>
+        
+        <!-- PDF to Word, Text, PPT -->
+        <div class="tool-card">
+            <img src="pdf-icon.png" alt="PDF Icon">
+            <h2>PDF Converter</h2>
+            <p>Convert PDF to Word, Text, or PPT</p>
+            <div class="upload-box" id="pdf-upload">
+                <p>Drag & Drop PDF File Here</p>
+            </div>
+            <select id="pdf-format">
+                <option value="word">Word</option>
+                <option value="text">Text</option>
+                <option value="ppt">PPT</option>
+            </select>
+            <button onclick="convertPDF()">Convert</button>
+        </div>
+
+        <!-- PNG to JPG (and vice versa) -->
+        <div class="tool-card">
+            <img src="image-icon.png" alt="Image Icon">
+            <h2>Image Converter</h2>
+            <p>Convert PNG to JPG or JPG to PNG</p>
+            <div class="upload-box" id="image-upload">
+                <p>Drag & Drop Image Here</p>
+            </div>
+            <select id="image-format">
+                <option value="png">PNG</option>
+                <option value="jpg">JPG</option>
+            </select>
+            <button onclick="convertImage()">Convert</button>
+        </div>
+
+        <!-- Word Counter -->
+        <div class="tool-card">
+            <img src="word-icon.png" alt="Word Icon">
+            <h2>Word Counter</h2>
+            <p>Count words in your text</p>
+            <textarea id="word-input" placeholder="Paste or type your text here"></textarea>
+            <p>Word Count: <span id="word-count">0</span></p>
+        </div>
+
+        <!-- Plagiarism Detector -->
+        <div class="tool-card">
+            <img src="plagiarism-icon.png" alt="Plagiarism Icon">
+            <h2>Plagiarism Detector</h2>
+            <p>Check for plagiarism in your text</p>
+            <textarea id="plagiarism-input" placeholder="Paste or type your text here"></textarea>
+            <p>Human Written: <span id="human-percent">0%</span></p>
+            <p>AI Written: <span id="ai-percent">0%</span></p>
+        </div>
+
+        <!-- URL Shortener -->
+        <div class="tool-card">
+            <img src="url-icon.png" alt="URL Icon">
+            <h2>URL Shortener</h2>
+            <p>Shorten your long URLs</p>
+            <input type="text" id="url-input" placeholder="Enter your URL here">
+            <button onclick="shortenURL()">Shorten</button>
+            <p>Shortened URL: <a id="short-url" href="#" target="_blank"></a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
